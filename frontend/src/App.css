@@ -1,0 +1,114 @@
+/* App-level shared styles */
+.app-container {
+  width: 100%;
+  max-width: 1100px;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin: 0 auto;
+}
+
+@media (max-width: 860px) {
+  .app-container { grid-template-columns: 1fr; padding: 1rem; }
+}
+
+.glass-panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Shared form inputs */
+.form-group { margin-bottom: 1.25rem; }
+.form-group label {
+  display: block;
+  font-size: 0.75rem; font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 0.4rem;
+  text-transform: uppercase; letter-spacing: 0.05em;
+}
+
+.input-wrapper { position: relative; display: flex; align-items: center; }
+.input-icon { position: absolute; left: 0.85rem; color: var(--text-light); width: 1rem; height: 1rem; transition: color 0.15s; }
+.input-wrapper:focus-within .input-icon { color: var(--accent); }
+
+.form-input {
+  width: 100%;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  padding: 0.7rem 0.9rem 0.7rem 2.5rem;
+  color: var(--text-main);
+  font-family: inherit; font-size: 0.9rem;
+  transition: all 0.15s;
+}
+.form-input::placeholder { color: var(--text-light); }
+.form-input:focus {
+  outline: none;
+  border-color: var(--accent);
+  background: var(--surface);
+  box-shadow: 0 0 0 3px var(--accent-glow);
+}
+
+.submit-btn {
+  width: 100%;
+  background: var(--accent);
+  color: white; border: none; border-radius: 9px;
+  padding: 0.85rem 1rem; font-size: 0.9rem; font-weight: 600;
+  cursor: pointer; display: flex; justify-content: center; align-items: center; gap: 0.6rem;
+  transition: all 0.15s; margin-top: 1.5rem; font-family: inherit;
+}
+.submit-btn:hover  { background: var(--accent-dark); transform: translateY(-1px); }
+.submit-btn:disabled { background: var(--border); color: var(--text-light); cursor: not-allowed; transform: none; }
+
+.primary-btn {
+  background: var(--accent); color: white;
+  border: none; padding: 0.6rem 1.1rem;
+  border-radius: 8px; font-weight: 600; font-size: 0.85rem;
+  cursor: pointer; transition: all 0.15s; font-family: inherit;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.primary-btn:hover { background: var(--accent-dark); }
+
+.secondary-btn {
+  background: var(--surface); color: var(--text-main);
+  border: 1px solid var(--border); padding: 0.6rem 1.1rem;
+  border-radius: 8px; font-weight: 500; font-size: 0.85rem;
+  cursor: pointer; transition: all 0.15s; font-family: inherit;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.secondary-btn:hover { background: var(--border-light); }
+
+.error-message {
+  background: var(--danger-soft); color: var(--danger);
+  padding: 0.85rem 1rem; border-radius: 9px;
+  border: 1px solid #f7c5c5; font-size: 0.875rem;
+  display: flex; align-items: center; gap: 0.6rem;
+}
+
+/* Shared risk badges */
+.risk-badge {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  padding: 0.3rem 0.8rem; border-radius: 7px; font-weight: 700;
+  font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.04em;
+}
+.risk-High   { background: var(--danger-soft);  color: var(--danger); }
+.risk-Medium { background: var(--warning-soft); color: var(--warning); }
+.risk-Low    { background: var(--success-soft); color: var(--success); }
+
+/* placeholder */
+.results-panel {
+  display: flex; flex-direction: column;
+  justify-content: center; align-items: center;
+  height: 100%; text-align: center;
+}
+.placeholder {
+  display: flex; flex-direction: column; align-items: center;
+  gap: 0.75rem; color: var(--text-muted);
+}
+.placeholder svg { color: var(--border); }

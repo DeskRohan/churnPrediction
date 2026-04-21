@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap');
+
+:root {
+  /* ── Palette ── */
+  --bg:           #F8F9FA;
+  --surface:      #FFFFFF;
+  --text-main:    #1F2933;
+  --text-muted:   #6B7280;
+  --text-light:   #9CA3AF;
+  --border:       #E5E7EB;
+  --border-light: #F3F4F6;
+
+  /* ── Accent ── */
+  --accent:       #4F7C82;
+  --accent-dark:  #3D6268;
+  --accent-soft:  #DDEFF0;
+  --accent-glow:  rgba(79, 124, 130, 0.12);
+
+  /* ── Status ── */
+  --success:      #6BAA75;
+  --success-soft: #E6F4E8;
+  --warning:      #C9A86A;
+  --warning-soft: #FDF4E3;
+  --danger:       #D97B7B;
+  --danger-soft:  #FAEAEA;
+
+  /* ── Shadows (minimal, no color) ── */
+  --shadow-xs: 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-sm: 0 1px 4px rgba(0,0,0,0.06), 0 0 1px rgba(0,0,0,0.04);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.04);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Inter', -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text-main);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+@keyframes pageIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
